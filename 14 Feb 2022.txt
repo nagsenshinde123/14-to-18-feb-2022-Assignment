@@ -1,0 +1,101 @@
+1.) https://leetcode.com/problems/number-of-students-doing-homework-at-a-given-time/
+
+     public class NewClass {
+	public static int busyStudent(int[] startTime, int[] endTime, int queryTime) {
+	     int n = startTime.length;
+	     int ans = 0;
+	     for(int i=0;i<n;i++)
+	         ans += ((startTime[i] <= queryTime && queryTime <= endTime[i]) ? 1 : 0);
+	     return ans;
+	    }
+	    
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    int[] startTime = {1,2,3};
+	    int[] endTime = {3,2,7};
+	    int queryTime = 4;
+	    System.out.println(busyStudent(startTime, endTime, queryTime));
+	  }
+	}
+
+//**************************************************************************************//		
+
+2.) https://leetcode.com/problems/running-sum-of-1d-array/
+
+
+public class NewClass {
+	
+	public static void main(String[] args) {
+		int[]  arr = {1, 2, 3, 4, 5, 6};	
+		int sum =SumOfArrayElement(arr);
+		System.out.print("Sum of array element is = "+sum);
+				
+	 }
+	public static int SumOfArrayElement(int [] nums) {
+		int sum = 0;
+	       
+		for(int i=0; i<nums.length; i++) {
+			sum = sum + nums[i];
+		}
+			
+		return sum;
+		
+	}
+
+  }
+		
+
+//**************************************************************************************//		
+
+3.)  Given two arrays, find the intersection between them?
+        Input : int[]  arr1 = {1, 2, 3, 4, 5, 6};
+                 int[] arr2 = {2, 3, 4, 7, 8};
+        Output : { 2, 3, 4}
+
+
+      public class NewClass {
+	
+	public static void main(String[] args) {
+		int[]  arr1 = {1, 2, 3, 4, 5, 6};
+        int[] arr2 = {2, 3, 4, 7, 8};
+		for(int i=0; i<arr1.length; i++) {
+			for(int j=0; j<arr2.length; j++) {
+				if(arr1[i] == arr2[j]) {
+					System.out.print(arr1[i]+" ");
+				}
+				
+			}
+			
+			
+		}
+		
+				
+	 }
+
+  }
+ //**************************************************************************************//		   
+        
+4.)  Write a program to find second largest element in a given Array in java?"
+
+    public class NewClass {
+	
+	public static void main(String[] args) {
+		int arr[] = {44,56,11,22,33,78,96,54,87};
+		int temp = 0;
+		for(int i=0; i<arr.length; i++) {
+			for(int j=i+1; j<arr.length; j++) {
+				if(arr[i] < arr[j]) {
+					temp = arr[i];
+					arr[i] = arr[j];
+					arr[j] = temp;
+				}
+				
+			}
+			
+		}
+		System.out.println("Second largest element = " +arr[1]);
+				
+	 }
+
+  }
+//**************************************************************************************//		
